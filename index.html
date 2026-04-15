@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biodata Modern</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- W3.CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            border-radius: 50%;
+            margin-top: 40px;
+            border: 4px solid white;
+        }
+
+        .menu button {
+            margin: 5px;
+        }
+
+        .content {
+            margin: 30px auto;
+            width: 85%;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            animation: fade 0.5s;
+        }
+
+        .content img {
+            width: 100%;
+            max-height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        @keyframes fade {
+            from {opacity:0; transform:translateY(20px);}
+            to {opacity:1; transform:translateY(0);}
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- FOTO -->
+<img src="foto.jpg" class="profile-img">
+<h2>Windy Olivia Alfons</h2>
+
+<!-- MENU -->
+<div class="menu">
+    <button class="w3-button w3-blue w3-round" onclick="show('status')"><i class="fa fa-user"></i> Status</button>
+    <button class="w3-button w3-purple w3-round" onclick="show('sekolah')"><i class="fa fa-school"></i> Sekolah</button>
+    <button class="w3-button w3-orange w3-round" onclick="show('pendidikan')"><i class="fa fa-graduation-cap"></i> Pendidikan</button>
+    <button class="w3-button w3-red w3-round" onclick="show('alamat')"><i class="fa fa-home"></i> Alamat</button>
+    <button class="w3-button w3-teal w3-round" onclick="show('skill')"><i class="fa fa-code"></i> Skill</button>
+    <button class="w3-button w3-pink w3-round" onclick="show('kontak')"><i class="fa fa-envelope"></i> Kontak</button>
+</div>
+
+<!-- CONTENT -->
+<div id="content" class="content">
+    <h3>Selamat Datang</h3>
+    <p>Klik menu untuk melihat biodata Saya</p>
+</div>
+
+<script>
+function show(menu){
+    let content = document.getElementById("content");
+
+    if(menu === "status"){
+        content.innerHTML = `
+        <h3><i class="fa fa-user"></i> Status</h3>
+        <p>Mahasiswa Ilmu Komputer</p>
+        <p>Mahasiswa Aktif Semester 4</p>
+         <p>Aktif mengikuti kegiatan riset dan pengembangan diri</p>
+        `;
+    }
+
+    if(menu === "sekolah"){
+        content.innerHTML = `
+        <h3><i class="fa fa-school"></i> Asal Sekolah</h3>
+        <p>TK Sumber Keselamatan</p>
+        <p>SD Negeri 1 Lateri</p>
+        <p>SMP Negeri 9 Ambon</p>
+        <p>SMA Negeri 5 Ambon</p>
+        `;
+    }
+
+    if(menu === "pendidikan"){
+        content.innerHTML = `
+        <h3><i class="fa fa-graduation-cap"></i> Pendidikan</h3>
+        <p>Universitas Pattimura</p>
+        <p>Jurusan: Matematika</p>
+        <p>Prodi: Ilmu Komputer<p>
+        <p>Semester: 4</p>
+        <p>IPK Sementara: 3.45 (skala 4.00)</p>
+        `;
+    }
+
+    if(menu === "alamat"){
+        content.innerHTML = `
+        <h3><i class="fa fa-home"></i> Alamat</h3>
+        <p>Passo Air Besar</p>
+        <p>Desa: Passo</p>
+        <p>Kecamatan: Baguala</p>
+        <p>Kabupaten: Kota Ambon</p>
+        <p>Provinsi: Maluku, Indonesia</p>
+        `;
+    }
+
+    if(menu === "skill"){
+        content.innerHTML = `
+        <h3><i class="fa fa-code"></i> Skill</h3>
+
+        <p>HTML & CSS</p>
+        <div class="w3-light-grey w3-round">
+            <div class="w3-blue w3-round" style="width:65%">65%</div>
+        </div>
+
+        <p>Python</p>
+        <div class="w3-light-grey w3-round">
+            <div class="w3-green w3-round" style="width:75%">75%</div>
+        </div>
+
+        <p>Microsoft Office</p>
+        <div class="w3-light-grey w3-round">
+            <div class="w3-orange w3-round" style="width:80%">80%</div>
+        </div>
+        `;
+    }
+
+    if(menu === "kontak"){
+        content.innerHTML = `
+        <h3><i class=""fa fa-envelope""></i> Kontak</h3> 
+    <p>
+        <i class="fa-solid fa-envelope"></i>
+        <a
+    href="windyalfons551@gmail.com">
+        windyalfons551@gmail.com@gmail.com
+    </a>
+</p>
+
+<p>
+    <i class="fa-brands fa-instagram"></i> 
+    <a href="https://instagram.com/windyalfons" target="_blank">
+        @windyalfons
+    </a>
+</p>
+
+<p>
+    <i class="fa-solid fa-phone"></i> 
+    <a href="https://wa.me/6285244876548" target="_blank">
+        085244876548
+    </a>
+</p>
+    <p><i class="fab fa-github"></i>
+        <a href="https://github.com/windyalfons551-code"target="_blank">Github
+        </a>
+    </p>
+        `;
+    }
+}
+</script>
+
+</body>
+</html>
